@@ -32,77 +32,79 @@ const icon = {
 const token = localStorage.getItem("token");
 
 export const routes = [
-  ...(token
-    ? [
-        {
-          layout: "dashboard",
-          pages: [
-            {
-              icon: <HomeIcon {...icon} />,
-              name: "dashboard",
-              path: "/home",
-              element: <Home />,
-            },
-            {
-              icon: <UserCircleIcon {...icon} />,
-              name: "profile",
-              path: "/profile",
-              element: <Profile />,
-            },
-            {
-              icon: <ShoppingCartIcon {...icon} />,
-              name: "products",
-              path: "/products",
-              element: <Products />,
-            },
-            {
-              icon: <GlobeAltIcon {...icon} />,
-              name: "brands",
-              path: "/brands",
-              element: <Brands />,
-            },
-            {
-              icon: <BookmarkIcon {...icon} />,
-              name: "categorys",
-              path: "/categorys",
-              element: <Categorys />,
-            },
-            {
-              icon: <Bars3BottomLeftIcon {...icon} />,
-              name: "sub categorys",
-              path: "/sub-categorys",
-              element: <SubCategorys />,
-            },
-            {
-              icon: <PaintBrushIcon {...icon} />,
-              name: "colors",
-              path: "/colors",
-              element: <Colors />,
-            },
-            { path: "/getByIdColor/:id", element: <GetByIdColor /> },
-            { path: "/getByIdSubCategory/:id1", element: <GetByIdSubCategory /> },
-            { path: "/getByIdCategory/:id2", element: <GetByIdCategory /> },
-            { path: "/getByIdProduct/:id3", element: <GetByIdProduct /> },
-            { path: "/getByIdBrand/:id4", element: <GetByIdBrand /> },
-          ],
-        },
-      ]
-    : [
-        {
-          title: "auth pages",
-          layout: "auth",
-          pages: [
-            {
-              icon: <ServerStackIcon {...icon} />,
-              name: "sign in",
-              path: "/sign-in",
-              element: <SignIn />,
-            },
-            
-          ],
-        },
-      ]),
+  {
+    layout: "dashboard",
+    pages: [
+      {
+        icon: <HomeIcon className="w-5 h-5" />,
+        name: "dashboard",
+        path: "/home",
+        element: <Home />,
+      },
+      {
+        icon: <UserCircleIcon className="w-5 h-5" />,
+        name: "profile",
+        path: "/profile",
+        element: <Profile />,
+      },
+      {
+        icon: <ShoppingCartIcon className="w-5 h-5" />,
+        name: "products",
+        path: "/products",
+        element: <Products />,
+      },
+      {
+        icon: <GlobeAltIcon className="w-5 h-5" />,
+        name: "brands",
+        path: "/brands",
+        element: <Brands />,
+      },
+      {
+        icon: <BookmarkIcon className="w-5 h-5" />,
+        name: "categorys",
+        path: "/categorys",
+        element: <Categorys />,
+      },
+      {
+        icon: <Bars3BottomLeftIcon className="w-5 h-5" />,
+        name: "sub categorys",
+        path: "/sub-categorys",
+        element: <SubCategorys />,
+      },
+      {
+        icon: <PaintBrushIcon className="w-5 h-5" />,
+        name: "colors",
+        path: "/colors",
+        element: <Colors />,
+      },
+
+      { path: "/getByIdColor/:id", element: <GetByIdColor /> },
+      { path: "/getByIdSubCategory/:id1", element: <GetByIdSubCategory /> },
+      { path: "/getByIdCategory/:id2", element: <GetByIdCategory /> },
+      { path: "/getByIdProduct/:id3", element: <GetByIdProduct /> },
+      { path: "/getByIdBrand/:id4", element: <GetByIdBrand /> },
+    ],
+  },
+
+  {
+    layout: "auth",
+    pages: [
+      {
+        icon: <ServerStackIcon className="w-5 h-5" />,
+        name: "sign in",
+        path: "/sign-in",
+        element: <SignIn />,
+      },
+      {
+        icon: <RectangleStackIcon className="w-5 h-5" />,
+        name: "sign up",
+        path: "/sign-up",
+        element: <SignUp />,
+      },
+    ],
+  },
 ];
+
 
 export default routes;
 

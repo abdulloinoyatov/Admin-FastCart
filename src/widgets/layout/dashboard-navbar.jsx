@@ -35,11 +35,12 @@ export function DashboardNavbar() {
   const [layout, page] = pathname.split("/").filter((el) => el !== "");
   const navigate = useNavigate()
   const [modal, setDialog] = useState(false)
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.clear();
-    navigate("/auth/sign-in", { replace: true });
-  };
+ const handleLogout = () => {
+  localStorage.removeItem("token");
+  navigate("/auth/sign-in", { replace: true });
+};
+
+
 
   return (
     <Navbar
