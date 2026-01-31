@@ -19,7 +19,7 @@ function App() {
   }
 />
       <Route path="/auth/*" element={<Auth />} />
-      <Route path="*" element={<Navigate to={token ? "/dashboard/home" : "/auth/sign-up"} replace />} />
+      <Route path="*" element={<Navigate to={token ? "/dashboard/home" : "/auth/sign-in"} replace />} />
     </Routes>
   );
 }
