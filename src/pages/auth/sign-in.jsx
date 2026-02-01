@@ -6,6 +6,7 @@ import {
   Button,
   Typography,
 } from "@material-tailwind/react";
+import { message } from "antd";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
@@ -28,9 +29,9 @@ export function SignIn() {
   
      if (statusLogin) {
        navigate("/");
-       alert("Succsess");
+       message.success("Succsess");
      } else {
-       alert("Somthing went error");
+       message.success("Somthing went error");
      }
    }
    useEffect(() => {

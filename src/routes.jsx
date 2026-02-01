@@ -29,7 +29,6 @@ import GetByIdBrand from "./pages/dashboard/getByIdBrand";
 const icon = {
   className: "w-5 h-5 text-inherit",
 };
-const token = localStorage.getItem("token");
 
 export const routes = [
   {
